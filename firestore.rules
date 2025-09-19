@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ... existing rules for users, plots, etc. ...
+
+    match /drone_service_orders/{orderId} {
+      allow read: if request.auth != null && 
+                  (resource.data.customerId == request.auth.uid || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'employee');
+      allow create: if false;
+      allow update: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'employee';
+    }
+
+    // Rules for Live Stream Orders
+    // Customers can read their own orders. Employees can read all.
+    match /live_stream_orders/{orderId} {
+      allow read: if request.auth != null && 
+                  (resource.data.customerId == request.auth.uid || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'employee');
+      // Creation is handled by the Cloud Function.
+      allow create: if false;
+      // Updates for status are handled by an admin-only Cloud Function.
+      allow update: if false; 
+    }
+  }
+}
