@@ -1,0 +1,5 @@
+{
+  "name": "Elysian Scribe v3.0",
+  "description": "A web-based replica of the Elysian Scribe v3.0 desktop application for genealogical data entry from headstone images. It features an advanced image workstation with zoom, pan, and rotation, dynamic data entry forms, and integrates with Gemini API for powerful OCR capabilities.",
+  "requestFramePermissions": []
+}
