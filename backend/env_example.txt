@@ -1,0 +1,27 @@
+# Elysian Fields Backend Configuration
+
+# Flask Configuration
+SECRET_KEY=your-secret-key-here
+FLASK_ENV=development
+FLASK_DEBUG=True
+
+# Database Configuration
+DATABASE_URL=sqlite:///elysian_fields.db
+# For production, use PostgreSQL:
+# DATABASE_URL=postgresql://username:password@localhost/elysian_fields
+
+# Tesseract OCR Configuration
+TESSERACT_PATH=C:\Program Files\Tesseract-OCR\tesseract.exe
+# For Linux/Mac:
+# TESSERACT_PATH=/usr/bin/tesseract
+
+# Google Maps API (for future integration)
+GOOGLE_MAPS_API_KEY=your-google-maps-api-key-here
+
+# File Upload Configuration
+MAX_CONTENT_LENGTH=500MB
+UPLOAD_FOLDER=uploads
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=5000

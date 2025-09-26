@@ -1,0 +1,12 @@
+Flask
+Flask-CORS
+Flask-SQLAlchemy
+Werkzeug
+Pillow
+pytesseract
+opencv-python
+pandas
+python-dotenv
+requests
+folium
+googlemaps

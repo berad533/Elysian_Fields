@@ -1,0 +1,298 @@
+/* Project Elysian Fields - Stylesheet */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&display=swap');
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #E0E0E0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #E0E0E0;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #E0E0E0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+}
+
+/* Layout Container */
+#customer-portal-view,
+#employee-portal-view {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Customer Portal Styles */
+.memorial-photo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.memorial-photo img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #2C2C2C;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.transcribed-data {
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #2C2C2C;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.transcribed-data p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.transcribed-data p:last-child {
+    margin-bottom: 0;
+}
+
+.maintenance-history {
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #2C2C2C;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.maintenance-history ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.maintenance-history li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #2C2C2C;
+    font-size: 1rem;
+}
+
+.maintenance-history li:last-child {
+    border-bottom: none;
+}
+
+.customer-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Employee Portal Styles */
+.widget-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.date-widget,
+.weather-widget,
+.stats-widget {
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #2C2C2C;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.work-order-list {
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #2C2C2C;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.work-order-card {
+    background-color: #2C2C2C;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #3C3C3C;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.work-order-card:last-child {
+    margin-bottom: 0;
+}
+
+.work-order-card h3 {
+    color: #800020;
+    margin-bottom: 0.75rem;
+}
+
+.work-order-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.work-order-card button {
+    margin-top: 0.75rem;
+}
+
+/* Button Styles */
+button {
+    background-color: #800020;
+    color: #E0E0E0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #A00030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Link Styles */
+a {
+    color: #800020;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #customer-portal-view,
+    #employee-portal-view {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .widget-area {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .memorial-photo img {
+        max-width: 250px;
+    }
+    
+    .transcribed-data,
+    .maintenance-history,
+    .work-order-list {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .memorial-photo img {
+        max-width: 200px;
+    }
+    
+    button {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+button:focus,
+a:focus {
+    outline: 2px solid #800020;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+    
+    .transcribed-data,
+    .maintenance-history,
+    .work-order-list,
+    .date-widget,
+    .weather-widget,
+    .stats-widget {
+        background-color: #000000;
+        border: 2px solid #FFFFFF;
+    }
+}
